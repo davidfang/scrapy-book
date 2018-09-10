@@ -1,4 +1,4 @@
-## <center>Python网络爬虫开发与实战</center>
+## <center>Python网络爬虫实战</center>
 
 ### 关于本书介绍
 ---
