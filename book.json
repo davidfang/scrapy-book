@@ -1,18 +1,16 @@
 {
-  "title": "标题",
-  "author": "作者",
-  "description": "简单描素",
+  "title": "Python网络爬虫开发与实战",
+  "author": "水痕",
+  "description": "",
   "language": "zh-hans", 
   "gitbook": "3.2.3", 
-  "styles": {
-     
-  },
+  "styles": {},
   "structure": {
     "readme": "README.md" 
   },
   "links": {
     "sidebar": {
-      "我的博客": "https://blog.csdn.net/kuangshp128" 
+      "我的CSDN博客": "https://blog.csdn.net/kuangshp128" 
     }
   },
   "plugins": [ 
@@ -20,13 +18,13 @@
     "splitter",
     "expandable-chapters-small",
     "anchors",
-
     "github",
     "github-buttons",
     "donate",
     "sharing-plus",
     "anchor-navigation-ex",
-    "favicon"
+    "favicon",
+    "toggle-chapters"
   ],
   "pluginsConfig": {
     "github": {
@@ -35,14 +33,14 @@
     "github-buttons": {
       "buttons": [{
         "user": "kuangshp",
-        "repo": "mysql",
+        "repo": "scrapy-book",
         "type": "star",
         "size": "small",
         "count": true
       }]
     },
     "donate": {
-      "alipay": "./source/images/donate.png",
+      "alipay": "./source/images/donate.jpeg",
       "title": "",
       "button": "赞赏",
       "alipayText": " "
