@@ -2,8 +2,9 @@
 
 * [基本介绍](README.md)
 * [第一章:urllib模块的使用](chapter01/0.md)
-  * [1 常用方法的介绍](chapter01/01.md)
-  * [2 request常用方法](chapter01/02.md)
+  * [1.常用方法的介绍](chapter01/01.md)
+  * [2.request常用方法](chapter01/02.md)
+  * [3.关于cookie的认识](chapter01/03.md)
 * [第二章:requests请求库的使用](chapter02/0.md)
   * [1 第一节](chapter02/01.md)
 
