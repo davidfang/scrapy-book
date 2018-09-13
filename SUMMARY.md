@@ -12,8 +12,8 @@
 
 * [第三章:解析库的使用](chapter03/0.md)
   * [1.xpath语法的介绍](chapter03/01.md)
-  * [2.etree的使用](chapter03/02.md)
-  * [3.xpath和etree结合起来使用](chapter03/03.md)
+  * [2.lxml库的使用](chapter03/02.md)
+  * [3.xpath和lxml结合起来使用](chapter03/03.md)
   * [4.Beautiful Soup的使用](chapter03/04.md)
   * [5.css选择器](chapter03/05.md)
   * [6.正则的使用](chapter03/06.md)
