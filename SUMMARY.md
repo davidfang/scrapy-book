@@ -17,5 +17,5 @@
   * [4.使用xpath和lxml爬取电脑网站](chapter03/04.md)
   * [5.Beautiful Soup的使用](chapter03/05.md)
   * [6.css选择器](chapter03/06.md)
-  * [7.使用bs4爬取获取中国天气网信息](chapter03/07.md)
+  * [7.使用bs4爬取获取贵州农产品](chapter03/07.md)
   * [8.正则的使用](chapter03/08.md)
