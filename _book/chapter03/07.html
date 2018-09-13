@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>4.使用xpath和lxml爬取电脑网站 · Python网络爬虫开发与实战</title>
+        <title>7.使用bs4爬取获取中国天气网信息 · Python网络爬虫开发与实战</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -71,10 +71,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="05.html" />
+    <link rel="next" href="08.html" />
     
     
-    <link rel="prev" href="03.html" />
+    <link rel="prev" href="06.html" />
     
 
     
@@ -322,7 +322,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.4" data-path="04.html">
+        <li class="chapter " data-level="1.4.4" data-path="04.html">
             
                 <a href="04.html">
             
@@ -361,7 +361,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="07.html">
+        <li class="chapter active" data-level="1.4.7" data-path="07.html">
             
                 <a href="07.html">
             
@@ -422,7 +422,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >4.使用xpath和lxml爬取电脑网站</a>
+        <a href=".." >7.使用bs4爬取获取中国天气网信息</a>
     </h1>
 </div>
 
@@ -437,7 +437,62 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h3 id="&#x4F7F;&#x7528;bs4&#x722C;&#x53D6;&#x83B7;&#x53D6;&#x4E2D;&#x56FD;&#x5929;&#x6C14;&#x7F51;&#x4FE1;&#x606F;"><a name="&#x4F7F;&#x7528;bs4&#x722C;&#x53D6;&#x83B7;&#x53D6;&#x4E2D;&#x56FD;&#x5929;&#x6C14;&#x7F51;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;bs4&#x722C;&#x53D6;&#x83B7;&#x53D6;&#x4E2D;&#x56FD;&#x5929;&#x6C14;&#x7F51;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4F7F;&#x7528;bs4&#x722C;&#x53D6;&#x83B7;&#x53D6;&#x4E2D;&#x56FD;&#x5929;&#x6C14;&#x7F51;&#x4FE1;&#x606F;" class="plugin-anchor" href="#&#x4F7F;&#x7528;bs4&#x722C;&#x53D6;&#x83B7;&#x53D6;&#x4E2D;&#x56FD;&#x5929;&#x6C14;&#x7F51;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a><center>&#x4F7F;&#x7528;bs4&#x722C;&#x53D6;&#x83B7;&#x53D6;&#x4E2D;&#x56FD;&#x5929;&#x6C14;&#x7F51;&#x4FE1;&#x606F;</center></h3>
+<h3 id="&#x4E00;&#x3001;&#x722C;&#x53D6;&#x6570;&#x636E;&#x6B65;&#x9AA4;"><a name="&#x4E00;&#x3001;&#x722C;&#x53D6;&#x6570;&#x636E;&#x6B65;&#x9AA4;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x3001;&#x722C;&#x53D6;&#x6570;&#x636E;&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E00;&#x3001;&#x722C;&#x53D6;&#x6570;&#x636E;&#x6B65;&#x9AA4;" class="plugin-anchor" href="#&#x4E00;&#x3001;&#x722C;&#x53D6;&#x6570;&#x636E;&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x722C;&#x53D6;&#x6570;&#x636E;&#x6B65;&#x9AA4;</h3>
+<ul>
+<li><p>1&#x3001;<a href="http://www.weather.com.cn/textFC/hb.shtml" target="_blank">&#x722C;&#x53D6;&#x7F51;&#x7AD9;&#x5730;&#x5740;</a></p>
+</li>
+<li><p>2&#x3001;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-py"><span class="hljs-keyword">import</span> requests
+<span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Weather</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.url = <span class="hljs-string">&apos;http://www.weather.com.cn/textFC/hb.shtml&apos;</span>
+        self.headers = {
+            <span class="hljs-string">&apos;User-Agent&apos;</span>: <span class="hljs-string">&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36&apos;</span>,
+        }
+
+<span class="hljs-meta">    @property</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_html</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        &#x83B7;&#x53D6;&#x7F51;&#x7AD9;&#x4FE1;&#x606F;
+        :return:
+        &quot;&quot;&quot;</span>
+        response = requests.get(url=self.url, headers=self.headers)
+        <span class="hljs-keyword">if</span> response.status_code == <span class="hljs-number">200</span>:
+            <span class="hljs-keyword">return</span> response.content.decode(<span class="hljs-string">&apos;utf8&apos;</span>)
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_data</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        &#x4F7F;&#x7528;bs4&#x63D0;&#x53D6;&#x6570;&#x636E;
+        :return:
+        &quot;&quot;&quot;</span>
+        soup = BeautifulSoup(self.get_html, <span class="hljs-string">&apos;lxml&apos;</span>)
+        conMidtab = soup.find(<span class="hljs-string">&apos;div&apos;</span>, attrs={<span class="hljs-string">&apos;class&apos;</span>: <span class="hljs-string">&apos;conMidtab&apos;</span>})
+        conMidtab2 = conMidtab.find_all(<span class="hljs-string">&apos;div&apos;</span>, attrs={<span class="hljs-string">&apos;class&apos;</span>: <span class="hljs-string">&apos;conMidtab2&apos;</span>})
+        temperature = []
+        <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> conMidtab2:
+            trs = item.find_all(<span class="hljs-string">&apos;tr&apos;</span>)[<span class="hljs-number">2</span>:]
+            <span class="hljs-keyword">for</span> tr <span class="hljs-keyword">in</span> trs:
+                dict1 = {}
+                <span class="hljs-comment"># &#x7531;&#x4E8E;&#x8868;&#x683C;&#x7B2C;&#x4E00;&#x884C;&#x7684;&#x95EE;&#x9898;&#x7279;&#x6B8A;&#x5904;&#x7406;</span>
+                city = tr.find(<span class="hljs-string">&apos;td&apos;</span>, attrs={<span class="hljs-string">&apos;height&apos;</span>: <span class="hljs-string">&apos;23&apos;</span>}).get_text().replace(<span class="hljs-string">&apos;\n&apos;</span>, <span class="hljs-string">&apos;&apos;</span>)
+                min_temperature = tr.find(<span class="hljs-string">&apos;td&apos;</span>, attrs={<span class="hljs-string">&apos;width&apos;</span>: <span class="hljs-string">&apos;86&apos;</span>}).get_text()
+                <span class="hljs-comment"># &#x751F;&#x6210;&#x5B57;&#x5178;&#x8FD4;&#x56DE;</span>
+                dict1[<span class="hljs-string">&apos;city&apos;</span>] = city
+                dict1[<span class="hljs-string">&apos;min_temperature&apos;</span>] = min_temperature
+                temperature.append(dict1)
+        <span class="hljs-keyword">return</span> temperature
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+    weather = Weather()
+    print(weather.get_data())
+</code></pre>
+</li>
+</ul>
+
                                 
                                 </section>
                             
@@ -464,12 +519,12 @@
 
             
                 
-                <a href="03.html" class="navigation navigation-prev " aria-label="Previous page: 3.xpath和lxml结合起来使用">
+                <a href="06.html" class="navigation navigation-prev " aria-label="Previous page: 6.css选择器">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="05.html" class="navigation navigation-next " aria-label="Next page: 5.Beautiful Soup的使用">
+                <a href="08.html" class="navigation navigation-next " aria-label="Next page: 8.正则的使用">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -480,7 +535,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.使用xpath和lxml爬取电脑网站","level":"1.4.4","depth":2,"next":{"title":"5.Beautiful Soup的使用","level":"1.4.5","depth":2,"path":"chapter03/05.md","ref":"chapter03/05.md","articles":[]},"previous":{"title":"3.xpath和lxml结合起来使用","level":"1.4.3","depth":2,"path":"chapter03/03.md","ref":"chapter03/03.md","articles":[]},"dir":"neutral"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon","toggle-chapters","livereload"],"styles":{},"pluginsConfig":{"github":{"url":"https://github.com/kuangshp/"},"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.jpeg","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"kuangshp","repo":"scrapy-book","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","author":"水痕","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python网络爬虫开发与实战","language":"zh-hans","links":{"sidebar":{"我的CSDN博客":"https://blog.csdn.net/kuangshp128"}},"gitbook":"3.2.3","description":""},"file":{"path":"chapter03/04.md","mtime":"2018-09-13T07:02:38.272Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-13T00:13:43.600Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"7.使用bs4爬取获取中国天气网信息","level":"1.4.7","depth":2,"next":{"title":"8.正则的使用","level":"1.4.8","depth":2,"path":"chapter03/08.md","ref":"chapter03/08.md","articles":[]},"previous":{"title":"6.css选择器","level":"1.4.6","depth":2,"path":"chapter03/06.md","ref":"chapter03/06.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon","toggle-chapters","livereload"],"styles":{},"pluginsConfig":{"github":{"url":"https://github.com/kuangshp/"},"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.jpeg","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"kuangshp","repo":"scrapy-book","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","author":"水痕","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python网络爬虫开发与实战","language":"zh-hans","links":{"sidebar":{"我的CSDN博客":"https://blog.csdn.net/kuangshp128"}},"gitbook":"3.2.3","description":""},"file":{"path":"chapter03/07.md","mtime":"2018-09-13T09:18:57.876Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-13T00:13:43.600Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
