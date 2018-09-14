@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>4.使用xpath和lxml爬取电脑网站 · Python网络爬虫开发与实战</title>
+        <title>4.使用xpath和lxml爬取伯乐在线 · Python网络爬虫开发与实战</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -327,7 +327,7 @@
                 <a href="04.html">
             
                     
-                    4.使用xpath和lxml爬取电脑网站
+                    4.使用xpath和lxml爬取伯乐在线
             
                 </a>
             
@@ -392,6 +392,38 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5" data-path="../chapter04/0.html">
+            
+                <a href="../chapter04/0.html">
+            
+                    
+                    第四章:数据存储
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter04/01.html">
+            
+                <a href="../chapter04/01.html">
+            
+                    
+                    1.关于文件的写入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -422,7 +454,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >4.使用xpath和lxml爬取电脑网站</a>
+        <a href=".." >4.使用xpath和lxml爬取伯乐在线</a>
     </h1>
 </div>
 
@@ -437,7 +469,57 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h2 id="&#x4F7F;&#x7528;xpath&#x548C;lxml&#x722C;&#x53D6;&#x4F2F;&#x4E50;&#x5728;&#x7EBF;"><a name="&#x4F7F;&#x7528;xpath&#x548C;lxml&#x722C;&#x53D6;&#x4F2F;&#x4E50;&#x5728;&#x7EBF;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;xpath&#x548C;lxml&#x722C;&#x53D6;&#x4F2F;&#x4E50;&#x5728;&#x7EBF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4F7F;&#x7528;xpath&#x548C;lxml&#x722C;&#x53D6;&#x4F2F;&#x4E50;&#x5728;&#x7EBF;" class="plugin-anchor" href="#&#x4F7F;&#x7528;xpath&#x548C;lxml&#x722C;&#x53D6;&#x4F2F;&#x4E50;&#x5728;&#x7EBF;"><i class="fa fa-link" aria-hidden="true"></i></a><center>&#x4F7F;&#x7528;xpath&#x548C;lxml&#x722C;&#x53D6;&#x4F2F;&#x4E50;&#x5728;&#x7EBF;</center></h2>
+<h3 id="&#x4E00;&#x3001;&#x722C;&#x53D6;&#x7684;&#x4EE3;&#x7801;"><a name="&#x4E00;&#x3001;&#x722C;&#x53D6;&#x7684;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x3001;&#x722C;&#x53D6;&#x7684;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E00;&#x3001;&#x722C;&#x53D6;&#x7684;&#x4EE3;&#x7801;" class="plugin-anchor" href="#&#x4E00;&#x3001;&#x722C;&#x53D6;&#x7684;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x722C;&#x53D6;&#x7684;&#x4EE3;&#x7801;</h3>
+<ul>
+<li><p>1&#x3001;<a href="http://python.jobbole.com/all-posts/" target="_blank">&#x7F51;&#x7AD9;&#x5730;&#x5740;</a></p>
+</li>
+<li><p>2&#x3001;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-py"><span class="hljs-keyword">import</span> requests
+<span class="hljs-keyword">from</span> lxml <span class="hljs-keyword">import</span> etree
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JobBole</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        self.url = <span class="hljs-string">&apos;http://python.jobbole.com/all-posts/&apos;</span>
+        self.headers = {
+            <span class="hljs-string">&apos;User-Agent&apos;</span>: <span class="hljs-string">&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36&apos;</span>,
+        }
+
+<span class="hljs-meta">    @property</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_article_link</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        &#x6293;&#x53D6;&#x7F51;&#x9875;
+        :return:
+        &quot;&quot;&quot;</span>
+        response = requests.get(url=self.url, headers=self.headers)
+        <span class="hljs-keyword">if</span> response.status_code == <span class="hljs-number">200</span>:
+            html = etree.HTML(response.text)
+            <span class="hljs-comment"># &#x73B0;&#x5728;&#x5C31;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#x7684;&#x8BBF;&#x95EE;&#x8BE6;&#x60C5;&#x9875;&#x9762;</span>
+            article = html.xpath(<span class="hljs-string">&apos;//div[@id=&quot;archive&quot;]/div[@class=&quot;post floated-thumb&quot;]&apos;</span>)[<span class="hljs-number">0</span>]
+            <span class="hljs-comment"># &#x67E5;&#x627E;&#x5230;&#x5F53;&#x524D;&#x6807;&#x7B7E;&#x4E0A;&#x7684;a&#x6807;&#x7B7E;</span>
+            a_link = article.xpath(<span class="hljs-string">&apos;./div[@class=&quot;post-meta&quot;]/p[@class=&quot;align-right&quot;]//a/@href&apos;</span>)[<span class="hljs-number">0</span>]
+            <span class="hljs-keyword">return</span> a_link
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_html</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        &#x83B7;&#x53D6;&#x8BE6;&#x60C5;&#x9875;&#x9762;&#x7684;&#x6570;&#x636E;
+        :return:
+        &quot;&quot;&quot;</span>
+        <span class="hljs-keyword">if</span> self.get_article_link:
+            response = requests.get(url=self.get_article_link, headers=self.headers)
+            <span class="hljs-keyword">if</span> response.status_code == <span class="hljs-number">200</span>:
+                html = etree.HTML(response.text)
+                title = html.xpath(<span class="hljs-string">&apos;//div[@class=&quot;entry-header&quot;]/h1/text()&apos;</span>)[<span class="hljs-number">0</span>]
+                article = html.xpath(<span class="hljs-string">&apos;//div[@id=&quot;article_content&quot;]&apos;</span>)[<span class="hljs-number">0</span>]
+                print({<span class="hljs-string">&quot;title&quot;</span>: title, <span class="hljs-string">&quot;article&quot;</span>: etree.tostring(article, encoding=<span class="hljs-string">&quot;utf8&quot;</span>).decode(<span class="hljs-string">&quot;utf8&quot;</span>)})
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    jobbole = JobBole()
+    jobbole.get_html()
+</code></pre>
+</li>
+</ul>
+
                                 
                                 </section>
                             
@@ -480,7 +562,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.使用xpath和lxml爬取电脑网站","level":"1.4.4","depth":2,"next":{"title":"5.Beautiful Soup的使用","level":"1.4.5","depth":2,"path":"chapter03/05.md","ref":"chapter03/05.md","articles":[]},"previous":{"title":"3.xpath和lxml结合起来使用","level":"1.4.3","depth":2,"path":"chapter03/03.md","ref":"chapter03/03.md","articles":[]},"dir":"neutral"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon","toggle-chapters","livereload"],"styles":{},"pluginsConfig":{"github":{"url":"https://github.com/kuangshp/"},"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.jpeg","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"kuangshp","repo":"scrapy-book","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","author":"水痕","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python网络爬虫开发与实战","language":"zh-hans","links":{"sidebar":{"我的CSDN博客":"https://blog.csdn.net/kuangshp128"}},"gitbook":"3.2.3","description":""},"file":{"path":"chapter03/04.md","mtime":"2018-09-13T07:02:38.272Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-13T00:13:43.600Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.使用xpath和lxml爬取伯乐在线","level":"1.4.4","depth":2,"next":{"title":"5.Beautiful Soup的使用","level":"1.4.5","depth":2,"path":"chapter03/05.md","ref":"chapter03/05.md","articles":[]},"previous":{"title":"3.xpath和lxml结合起来使用","level":"1.4.3","depth":2,"path":"chapter03/03.md","ref":"chapter03/03.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon","toggle-chapters","livereload"],"styles":{},"pluginsConfig":{"github":{"url":"https://github.com/kuangshp/"},"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.jpeg","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"kuangshp","repo":"scrapy-book","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","author":"水痕","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python网络爬虫开发与实战","language":"zh-hans","links":{"sidebar":{"我的CSDN博客":"https://blog.csdn.net/kuangshp128"}},"gitbook":"3.2.3","description":""},"file":{"path":"chapter03/04.md","mtime":"2018-09-14T06:00:28.896Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-13T00:13:43.600Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

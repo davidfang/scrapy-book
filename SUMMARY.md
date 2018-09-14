@@ -14,8 +14,11 @@
   * [1.xpath语法的介绍](chapter03/01.md)
   * [2.lxml库的使用](chapter03/02.md)
   * [3.xpath和lxml结合起来使用](chapter03/03.md)
-  * [4.使用xpath和lxml爬取电脑网站](chapter03/04.md)
+  * [4.使用xpath和lxml爬取伯乐在线](chapter03/04.md)
   * [5.Beautiful Soup的使用](chapter03/05.md)
   * [6.css选择器](chapter03/06.md)
   * [7.使用bs4爬取获取贵州农产品](chapter03/07.md)
   * [8.正则的使用](chapter03/08.md)
+
+* [第四章:数据存储](chapter04/0.md)
+  * [1.关于文件的写入](chapter04/01.md)
