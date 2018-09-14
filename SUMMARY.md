@@ -22,3 +22,5 @@
 
 * [第四章:数据存储](chapter04/0.md)
   * [1.关于文件的写入](chapter04/01.md)
+  * [2.mysql数据库的使用](chapter04/02.md)
+  * [3.mongodb数据库的使用](chapter04/03.md)
