@@ -22,5 +22,17 @@
 
 * [第四章:数据存储](chapter04/0.md)
   * [1.关于文件的写入](chapter04/01.md)
-  * [2.mysql数据库的使用](chapter04/02.md)
-  * [3.mongodb数据库的使用](chapter04/03.md)
+  * [2.python操作csv文件](chapter04/02.md)
+  * [3.数据存储到mysql数据库中](chapter04/03.md)
+  * [4.数据存储到mongodb数据库中](chapter04/04.md)
+  * [5.完整的下载数据存储的代码](chapter04/05.md)
+
+* [第五章:多线程爬虫](chapter05/0.md)
+
+* [第六章:爬虫的进阶](chapter06/0.md)
+  * [1.动态网站的爬取的策略](chapter06/01.md)
+  * [2.使用json方法爬取动态网站](chapter06/02.md)
+  * [3.关于Selenium的基本使用](chapter06/03.md)
+  * [4.关于phantomjs的使用](chapter06/04.md)
+
+* [第七章:scrapy框架的使用](chapter07/0.md)
