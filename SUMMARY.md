@@ -26,8 +26,11 @@
   * [3.数据存储到mysql数据库中](chapter04/03.md)
   * [4.数据存储到mongodb数据库中](chapter04/04.md)
   * [5.完整的下载数据存储的代码](chapter04/05.md)
+  * [6.使用urllib模块方式下载图片](chapter04/06.md)
+  * [7.使用写文件的方式下载图片](chapter04/07.md)
 
 * [第五章:多线程爬虫](chapter05/0.md)
+  * [1.多线程下载图片](chapter05/01.md)
 
 * [第六章:爬虫的进阶](chapter06/0.md)
   * [1.动态网站的爬取的策略](chapter06/01.md)
