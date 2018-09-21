@@ -605,7 +605,7 @@
                 <a href="03.html">
             
                     
-                    3.关于Selenium的基本使用
+                    3.关于Selenium的基本介绍及环境的安装
             
                 </a>
             
@@ -618,7 +618,20 @@
                 <a href="04.html">
             
                     
-                    4.关于phantomjs的使用
+                    4.selenium的基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="06.html">
+            
+                <a href="06.html">
+            
+                    
+                    6.关于phantomjs的使用
             
                 </a>
             
@@ -689,7 +702,55 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id=""><a name="" class="plugin-anchor" href="#"><i class="fa fa-link" aria-hidden="true"></i></a><center></center></h3>
+                                <h3 id="&#x4F7F;&#x7528;json&#x65B9;&#x6CD5;&#x722C;&#x53D6;&#x52A8;&#x6001;&#x7F51;&#x7AD9;"><a name="&#x4F7F;&#x7528;json&#x65B9;&#x6CD5;&#x722C;&#x53D6;&#x52A8;&#x6001;&#x7F51;&#x7AD9;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;json&#x65B9;&#x6CD5;&#x722C;&#x53D6;&#x52A8;&#x6001;&#x7F51;&#x7AD9;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4F7F;&#x7528;json&#x65B9;&#x6CD5;&#x722C;&#x53D6;&#x52A8;&#x6001;&#x7F51;&#x7AD9;" class="plugin-anchor" href="#&#x4F7F;&#x7528;json&#x65B9;&#x6CD5;&#x722C;&#x53D6;&#x52A8;&#x6001;&#x7F51;&#x7AD9;"><i class="fa fa-link" aria-hidden="true"></i></a><center>&#x4F7F;&#x7528;json&#x65B9;&#x6CD5;&#x722C;&#x53D6;&#x52A8;&#x6001;&#x7F51;&#x7AD9;</center></h3>
+<blockquote>
+<p>&#x672C;&#x7AE0;&#x8282;&#x76F4;&#x63A5;&#x5206;&#x6790;&#x62C9;&#x52FE;&#x7F51;&#x7684;<code>ajax</code>&#x8BF7;&#x6C42;&#x83B7;&#x53D6;&#x804C;&#x4E1A;&#x4FE1;&#x606F;,&#x7136;&#x540E;&#x8FDB;&#x884C;&#x6293;&#x53D6;&#x4E0B;&#x6765;</p>
+</blockquote>
+<h3 id="&#x4E00;&#x3001;&#x5206;&#x6790;&#x7F51;&#x9875;&#x6570;&#x636E;&#x8BF7;&#x6C42;"><a name="&#x4E00;&#x3001;&#x5206;&#x6790;&#x7F51;&#x9875;&#x6570;&#x636E;&#x8BF7;&#x6C42;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x3001;&#x5206;&#x6790;&#x7F51;&#x9875;&#x6570;&#x636E;&#x8BF7;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E00;&#x3001;&#x5206;&#x6790;&#x7F51;&#x9875;&#x6570;&#x636E;&#x8BF7;&#x6C42;" class="plugin-anchor" href="#&#x4E00;&#x3001;&#x5206;&#x6790;&#x7F51;&#x9875;&#x6570;&#x636E;&#x8BF7;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x5206;&#x6790;&#x7F51;&#x9875;&#x6570;&#x636E;&#x8BF7;&#x6C42;</h3>
+<p><img src="source/images/&#x62C9;&#x94A9;.jpg" alt="&#x62C9;&#x94A9;&#x5F80;"></p>
+<h3 id="&#x4E8C;&#x3001;&#x4F7F;&#x7528;requests&#x5E93;&#x76F4;&#x63A5;&#x6A21;&#x62DF;&#x8BF7;&#x6C42;&#x6570;&#x636E;"><a name="&#x4E8C;&#x3001;&#x4F7F;&#x7528;requests&#x5E93;&#x76F4;&#x63A5;&#x6A21;&#x62DF;&#x8BF7;&#x6C42;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x3001;&#x4F7F;&#x7528;requests&#x5E93;&#x76F4;&#x63A5;&#x6A21;&#x62DF;&#x8BF7;&#x6C42;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E8C;&#x3001;&#x4F7F;&#x7528;requests&#x5E93;&#x76F4;&#x63A5;&#x6A21;&#x62DF;&#x8BF7;&#x6C42;&#x6570;&#x636E;" class="plugin-anchor" href="#&#x4E8C;&#x3001;&#x4F7F;&#x7528;requests&#x5E93;&#x76F4;&#x63A5;&#x6A21;&#x62DF;&#x8BF7;&#x6C42;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;&#x4F7F;&#x7528;<code>requests</code>&#x5E93;&#x76F4;&#x63A5;&#x6A21;&#x62DF;&#x8BF7;&#x6C42;&#x6570;&#x636E;</h3>
+<pre><code class="lang-py"><span class="hljs-keyword">from</span> urllib <span class="hljs-keyword">import</span> parse
+<span class="hljs-keyword">import</span> requests
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_html</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;
+    &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x62C9;&#x94A9;&#x804C;&#x4F4D;&#x4FE1;&#x606F;
+    :return:
+    &quot;&quot;&quot;</span>
+    params = {
+        <span class="hljs-string">&apos;px&apos;</span>: <span class="hljs-string">&apos;default&apos;</span>,
+        <span class="hljs-string">&apos;city&apos;</span>: <span class="hljs-string">&apos;&#x6DF1;&#x5733;&apos;</span>,
+        <span class="hljs-string">&apos;needAddtionalResult&apos;</span>: <span class="hljs-string">&apos;false&apos;</span>
+    }
+    url = <span class="hljs-string">&apos;https://www.lagou.com/jobs/positionAjax.json?{0}&apos;</span>.format(parse.urlencode(params))
+    form_data = {
+        <span class="hljs-string">&apos;first&apos;</span>: <span class="hljs-string">&apos;true&apos;</span>,
+        <span class="hljs-string">&apos;pn&apos;</span>: <span class="hljs-string">&apos;1&apos;</span>,
+        <span class="hljs-string">&apos;kd&apos;</span>: <span class="hljs-string">&apos;python&apos;</span>,
+    }
+    headers = {
+        <span class="hljs-string">&apos;Accept&apos;</span>: <span class="hljs-string">&apos;application/json, text/javascript, */*; q=0.01&apos;</span>,
+        <span class="hljs-string">&apos;Accept-Encoding&apos;</span>: <span class="hljs-string">&apos;gzip, deflate, br&apos;</span>,
+        <span class="hljs-string">&apos;Accept-Language&apos;</span>: <span class="hljs-string">&apos;zh-CN,zh;q=0.9&apos;</span>,
+        <span class="hljs-string">&apos;Connection&apos;</span>: <span class="hljs-string">&apos;keep-alive&apos;</span>,
+        <span class="hljs-string">&apos;Content-Length&apos;</span>: <span class="hljs-string">&apos;25&apos;</span>,
+        <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;application/x-www-form-urlencoded; charset=UTF-8&apos;</span>,
+        <span class="hljs-string">&apos;Cookie&apos;</span>: <span class="hljs-string">&apos;JSESSIONID=ABAAABAAAGFABEFF0428531C82A2DC0C1C0DCAE2CA9FABE; _ga=GA1.2.484492928.1537518656; _gid=GA1.2.808273883.1537518656; _gat=1; Hm_lvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1537518657; user_trace_token=20180921163056-a947353a-bd78-11e8-a518-525400f775ce; LGSID=20180921163056-a9473670-bd78-11e8-a518-525400f775ce; PRE_UTM=; PRE_HOST=; PRE_SITE=; PRE_LAND=https%3A%2F%2Fwww.lagou.com%2F; LGUID=20180921163056-a9473875-bd78-11e8-a518-525400f775ce; TG-TRACK-CODE=index_search; LGRID=20180921163107-af919ae7-bd78-11e8-bb56-5254005c3644; Hm_lpvt_4233e74dff0ae5bd0a3d81c6ccf756e6=1537518667; index_location_city=%E6%B7%B1%E5%9C%B3; SEARCH_ID=a81f58b5627b460b8180ad514b967cf1&apos;</span>,
+        <span class="hljs-string">&apos;Host&apos;</span>: <span class="hljs-string">&apos;www.lagou.com&apos;</span>,
+        <span class="hljs-string">&apos;Origin&apos;</span>: <span class="hljs-string">&apos;https://www.lagou.com&apos;</span>,
+        <span class="hljs-string">&apos;Referer&apos;</span>: <span class="hljs-string">&apos;https://www.lagou.com/jobs/list_python?px=default&amp;city=%E6%B7%B1%E5%9C%B3&apos;</span>,
+        <span class="hljs-string">&apos;User-Agent&apos;</span>: <span class="hljs-string">&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36&apos;</span>,
+        <span class="hljs-string">&apos;X-Anit-Forge-Code&apos;</span>: <span class="hljs-string">&apos;0&apos;</span>,
+        <span class="hljs-string">&apos;X-Anit-Forge-Token&apos;</span>: <span class="hljs-string">&apos;None&apos;</span>,
+        <span class="hljs-string">&apos;X-Requested-With&apos;</span>: <span class="hljs-string">&apos;XMLHttpRequest&apos;</span>,
+    }
+    response = requests.post(url=url, data=form_data, headers=headers)
+    print(response.status_code)
+    print(response.json())
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    get_html()
+</code></pre>
 
                                 
                                 </section>
@@ -722,7 +783,7 @@
                 </a>
                 
                 
-                <a href="03.html" class="navigation navigation-next " aria-label="Next page: 3.关于Selenium的基本使用">
+                <a href="03.html" class="navigation navigation-next " aria-label="Next page: 3.关于Selenium的基本介绍及环境的安装">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -733,7 +794,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.使用json方法爬取动态网站","level":"1.7.2","depth":2,"next":{"title":"3.关于Selenium的基本使用","level":"1.7.3","depth":2,"path":"chapter06/03.md","ref":"chapter06/03.md","articles":[]},"previous":{"title":"1.动态网站的爬取的策略","level":"1.7.1","depth":2,"path":"chapter06/01.md","ref":"chapter06/01.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon","toggle-chapters","livereload"],"styles":{},"pluginsConfig":{"github":{"url":"https://github.com/kuangshp/"},"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.jpeg","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"kuangshp","repo":"scrapy-book","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","author":"水痕","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python网络爬虫开发与实战","language":"zh-hans","links":{"sidebar":{"我的CSDN博客":"https://blog.csdn.net/kuangshp128"}},"gitbook":"3.2.3","description":""},"file":{"path":"chapter06/02.md","mtime":"2018-09-18T01:24:35.672Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-20T06:05:29.584Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2.使用json方法爬取动态网站","level":"1.7.2","depth":2,"next":{"title":"3.关于Selenium的基本介绍及环境的安装","level":"1.7.3","depth":2,"path":"chapter06/03.md","ref":"chapter06/03.md","articles":[]},"previous":{"title":"1.动态网站的爬取的策略","level":"1.7.1","depth":2,"path":"chapter06/01.md","ref":"chapter06/01.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","donate","sharing-plus","anchor-navigation-ex","favicon","toggle-chapters","livereload"],"styles":{},"pluginsConfig":{"github":{"url":"https://github.com/kuangshp/"},"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/donate.jpeg","alipayText":" ","button":"赞赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"kuangshp","repo":"scrapy-book","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","author":"水痕","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python网络爬虫开发与实战","language":"zh-hans","links":{"sidebar":{"我的CSDN博客":"https://blog.csdn.net/kuangshp128"}},"gitbook":"3.2.3","description":""},"file":{"path":"chapter06/02.md","mtime":"2018-09-21T09:27:17.866Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-20T06:05:29.584Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
