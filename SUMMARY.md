@@ -38,7 +38,11 @@
   * [1.动态网站的爬取的策略](chapter06/01.md)
   * [2.使用json方法爬取动态网站](chapter06/02.md)
   * [3.关于Selenium的基本介绍及环境的安装](chapter06/03.md)
-  * [4.selenium的基本使用](chapter06/04.md)
-  * [6.关于phantomjs的使用](chapter06/06.md)
+  * [4.selenium的查找元素](chapter06/04.md)
+  * [5.selenium获取节点信息](chapter06/05.md)
+  * [6.selenium节点操作及执行js代码](chapter06/06.md)
+  * [7.selenium的等待认识](chapter06/07.md)
+  * [8.selenium的cookie及异常](chapter06/08.md)
+  * [9.关于phantomjs的使用](chapter06/09.md)
 
 * [第七章:scrapy框架的使用](chapter07/0.md)
