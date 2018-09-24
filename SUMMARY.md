@@ -42,7 +42,8 @@
   * [5.selenium获取节点信息](chapter06/05.md)
   * [6.selenium节点操作及操作表单](chapter06/06.md)
   * [7.selenium的等待认识](chapter06/07.md)
-  * [8.selenium的cookie及异常](chapter06/08.md)
-  * [9.关于phantomjs的使用](chapter06/09.md)
+  * [8.selenium的cookie、设置代理、异常](chapter06/08.md)
+  * [9.关于无界面浏览器的使用](chapter06/09.md)
+  * [10.抓取拉钩网关于python的招聘](chapter06/10.md)
 
 * [第七章:scrapy框架的使用](chapter07/0.md)
