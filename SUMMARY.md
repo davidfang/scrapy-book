@@ -55,3 +55,4 @@
   * [4.scrapy项目基本配置及常用命令](chapter08/04.md)
   * [5.scrapy自定义命令](chapter08/05.md)
   * [6.选择器的使用](chapter08/06.md)
+  * [7.Item的使用](chapter08/07.md)
