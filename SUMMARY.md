@@ -46,4 +46,12 @@
   * [9.关于无界面浏览器的使用](chapter06/09.md)
   * [10.抓取拉钩网关于python的招聘](chapter06/10.md)
 
-* [第七章:scrapy框架的使用](chapter07/0.md)
+* [第七章:爬虫的高级](chapter07/0.md)
+
+* [第八章:scrapy框架的使用](chapter08/0.md)
+  * [1.scrapy的安装](chapter08/01.md)
+  * [2.scrapy的介绍](chapter08/02.md)
+  * [3.twisted的认识](chapter08/03.md)
+  * [4.scrapy项目基本配置及常用命令](chapter08/04.md)
+  * [5.scrapy自定义命令](chapter08/05.md)
+  * [6.选择器的使用](chapter08/06.md)
