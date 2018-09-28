@@ -58,7 +58,7 @@
   * [7.Item和ItemLoader的使用](chapter08/07.md)
   * [8.spider的理解](chapter08/08.md)Î
   * [9.pipelines的使用](chapter08/09.md)Î
-  * [10.在scrapy框架中文件的写入](chapter08/10.md)Î
+  * [10.在scrapy框架中数据存储](chapter08/10.md)Î
   * [11.分页功能的使用](chapter08/11.md)Î
   * [12.爬取整个伯乐在线](chapter08/12.md)Î
   * [13.craw母模板爬虫](chapter08/13.md)Î
