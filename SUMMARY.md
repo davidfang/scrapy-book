@@ -61,4 +61,6 @@
   * [10.在scrapy框架中数据存储](chapter08/10.md)Î
   * [11.分页功能抓取数据](chapter08/11.md)Î
   * [12.craw母模板爬虫](chapter08/12.md)Î
-  * [13.craw母模板爬虫](chapter08/13.md)Î
+  * [13.关于Requests与Response的认识](chapter08/13.md)ÎÎ
+  * [14.使用scrapy进行模拟登录(一)](chapter08/14.md)ÎÎ
+  * [15.使用scrapy进行模拟登录(二)](chapter08/15.md)
