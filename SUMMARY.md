@@ -48,7 +48,7 @@
 
 * [第七章:爬虫的高级](chapter07/0.md)
 
-* [第八章:scrapy框架的使用](chapter08/0.md)
+* [第八章:scrapy框架的基本使用](chapter08/0.md)
   * [1.scrapy的安装](chapter08/01.md)
   * [2.scrapy的介绍](chapter08/02.md)
   * [3.twisted的认识](chapter08/03.md)
@@ -64,3 +64,4 @@
   * [13.关于Requests与Response的认识](chapter08/13.md)ÎÎ
   * [14.使用scrapy进行模拟登录(一)](chapter08/14.md)ÎÎ
   * [15.使用scrapy进行模拟登录(二)](chapter08/15.md)
+  * [16.使用scrapy下载图片](chapter08/16.md)
