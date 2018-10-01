@@ -65,3 +65,25 @@
   * [14.使用scrapy进行模拟登录(一)](chapter08/14.md)ÎÎ
   * [15.使用scrapy进行模拟登录(二)](chapter08/15.md)
   * [16.使用scrapy下载图片](chapter08/16.md)
+
+* [第九章:scrapy框架的高级使用](chapter09/0.md)
+  * [1.spider middleware(spider中间件)的认识](chapter09/01.md)
+  * [2.downloader middleware(下载中间件)的认识](chapter09/02.md)
+  * [3.关于url去重原理](chapter09/03.md)
+  * [4.突破反爬虫策略](chapter09/04.md)
+  * [5.搭建本地代理IP池](chapter09/05.md)
+  * [6.设置动态请求头](chapter09/06.md)
+
+* [第十章:scrapy框架的抓取动态网站数据](chapter10/0.md)
+  * [1.scrapy框架使用selenium抓取数据](chapter10/01.md)
+  * [2.scrapy框架使用无界面浏览器抓取数据](chapter10/02.md)
+  * [3.抓取天猫数据](chapter10/03.md)
+
+* [第十一章:scrapy-redis构建分布式爬虫](chapter11/0.md)
+  * [1.redis的认识](chapter11/01.md)
+  * [2.scrapy-redis架构](chapter11/02.md)
+  * [3.scrapy-redis分布式爬虫](chapter11/03.md)
+  * [4.使用分布式爬虫抓取珍爱网交友信息](chapter11/04.md)
+  * [5.数据持久化](chapter11/05.md)
+
+* [第十二章:移动端数据的抓取](chapter12/0.md)
