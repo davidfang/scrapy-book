@@ -61,15 +61,15 @@
   * [10.在scrapy框架中数据存储](chapter08/10.md)Î
   * [11.分页功能抓取数据](chapter08/11.md)Î
   * [12.craw母模板爬虫](chapter08/12.md)Î
-  * [13.关于Requests与Response的认识](chapter08/13.md)ÎÎ
-  * [14.使用scrapy进行模拟登录(一)](chapter08/14.md)ÎÎ
+  * [13.关于Requests与Response的认识](chapter08/13.md)
+  * [14.使用scrapy进行模拟登录(一)](chapter08/14.md)
   * [15.使用scrapy进行模拟登录(二)](chapter08/15.md)
   * [16.使用scrapy下载图片](chapter08/16.md)
 
 * [第九章:scrapy框架的高级使用](chapter09/0.md)
   * [1.spider middleware(spider中间件)的认识](chapter09/01.md)
   * [2.downloader middleware(下载中间件)的认识](chapter09/02.md)
-  * [3.关于url去重原理](chapter09/03.md)
+  * [3.自己编写下载中间件](chapter09/03.md)
   * [4.突破反爬虫策略](chapter09/04.md)
   * [5.搭建本地代理IP池](chapter09/05.md)
   * [6.设置动态请求头](chapter09/06.md)
