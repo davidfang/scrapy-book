@@ -78,9 +78,8 @@
 
 * [第十章:scrapy-redis构建分布式爬虫](chapter10/0.md)
   * [1.redis的认识](chapter10/01.md)
-  * [2.scrapy-redis架构](chapter10/02.md)
-  * [3.scrapy-redis分布式爬虫](chapter10/03.md)
-  * [4.使用分布式爬虫抓取珍爱网交友信息](chapter10/04.md)
-  * [5.数据持久化](chapter10/05.md)
+  * [2.scrapy-redis分布式爬虫](chapter10/02.md)
+  * [3.使用scrapyd部署项目](chapter10/03.md)
+  <!-- * [4.数据持久化](chapter10/04.md) -->
 
 * [第十一章:移动端数据的抓取](chapter12/0.md)
