@@ -46,7 +46,7 @@
   * [9.关于无界面浏览器的使用](chapter06/09.md)
   * [10.抓取拉钩网关于python的招聘](chapter06/10.md)
 
-* [第七章:爬虫的高级](chapter07/0.md)
+* [第七章:验证码的识别](chapter07/0.md)
 
 * [第八章:scrapy框架的基本使用](chapter08/0.md)
   * [1.scrapy的安装](chapter08/01.md)
@@ -70,16 +70,16 @@
   * [1.spider middleware(spider中间件)的认识](chapter09/01.md)
   * [2.downloader middleware(下载中间件)的认识](chapter09/02.md)
   * [3.自己编写下载中间件](chapter09/03.md)
-  * [4.突破反爬虫策略](chapter09/04.md)
-  * [5.搭建本地代理IP池](chapter09/05.md)
-  * [6.设置动态请求头](chapter09/06.md)
-  * [7.scrapy框架使用selenium抓取数据](chapter09/07.md)
-  * [8.scrapy框架使用无界面浏览器抓取数据](chapter09/08.md)
+  * [4.关于scrapy中url去除原理一](chapter09/04.md)
+  * [5.关于scrapy中url去除原理二](chapter09/05.md)
+  * [6.突破反爬虫策略](chapter09/06.md)
+  * [7.搭建本地代理IP池](chapter09/07.md)
+  * [8.设置动态请求头](chapter09/08.md)
+  * [9.scrapy框架使用selenium抓取数据](chapter09/09.md)
+  * [10.scrapy框架使用无界面浏览器抓取数据](chapter09/10.md)
 
 * [第十章:scrapy-redis构建分布式爬虫](chapter10/0.md)
   * [1.redis的认识](chapter10/01.md)
   * [2.scrapy-redis分布式爬虫](chapter10/02.md)
   * [3.使用scrapyd部署项目](chapter10/03.md)
   <!-- * [4.数据持久化](chapter10/04.md) -->
-
-* [第十一章:移动端数据的抓取](chapter12/0.md)
