@@ -16,7 +16,7 @@
 学习`python`网络爬虫所需的技能
 * 1、基础的`python`知识,可以参考我之前写的[`python`基础到进阶](https://kuangshp1.gitbooks.io/python-base/content/) - 掌握程度**一般**
 * 2、正则表达式, 可以参考我之前写的[python正则表达式](https://kuangshp1.gitbooks.io/python-base/content/chapter05/0.html) - 掌握程度 **熟练**
-* 3、抓取后的数据可视化显示,可以参考我之前写的[`django`基础到进阶](https://kuangshp1.gitbooks.io/django-book/content/)
+* 3、抓取后的数据可视化显示[使用pyecharts图表展示](http://pyecharts.org/#/zh-cn/prepare),可以参考我之前写的[`django`基础到进阶](https://kuangshp1.gitbooks.io/django-book/content/),将抓取的数据通过后台发送到前端页面显示。
 
 ### 关于爬虫
 
